@@ -9,20 +9,20 @@ import com.test.automation.framework.datadrive.ExcelDataDrive;
 import com.test.automation.framework.datadrive.ClassParser.ClassParserException;
 import com.test.automation.framework.datadrive.ClassParser.DataNotAvailableException;
 import com.test.automation.framework.pagemodel.TestClass;
-import com.test.automation.framework.pagemodel.pages.GoogleHomePage;
-import com.test.automation.framework.pagemodel.pages.GoogleResultsPage;
+import com.test.automation.framework.pagemodel.simplepage.SimpleGoogleHomePage;
+import com.test.automation.framework.pagemodel.simplepage.SimpleGoogleResultsPage;
 
 public class GoogleSearchDataTest extends TestClass{
 	
 	@Test(dataProvider="googleSearchData")
 	public void googleTest(GoogleSearchData data){
-		GoogleHomePage homePage = to(GoogleHomePage.class);
+		SimpleGoogleHomePage homePage = to(SimpleGoogleHomePage.class);
 		
 		homePage.searchForString(data.searchtext);
 		
-		util.waitForPage(browser, GoogleResultsPage.class);		
+		util.waitForPage(browser, SimpleGoogleResultsPage.class);		
 		
-		GoogleResultsPage resultsPage = at(GoogleResultsPage.class);
+		SimpleGoogleResultsPage resultsPage = at(SimpleGoogleResultsPage.class);
 		
 		resultsPage.clickOnResult();
 		

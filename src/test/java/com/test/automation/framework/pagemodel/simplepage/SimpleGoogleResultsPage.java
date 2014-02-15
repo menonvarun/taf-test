@@ -1,13 +1,12 @@
-package com.test.automation.framework.pagemodel.pages;
+package com.test.automation.framework.pagemodel.simplepage;
 
 import java.io.File;
 
 import com.test.automation.framework.locator.CustomPageFactory;
 import com.test.automation.framework.pagemodel.PageClass;
-import com.test.automation.framework.util.locator.GoogleLocator;
 
-public class GoogleResultsPage extends PageClass{
-	GoogleLocator googleLocator;
+public class SimpleGoogleResultsPage extends PageClass{
+	SimpleGoogleLocator googleLocator;
 	
 	@Override
 	public String toUrl() {
@@ -22,7 +21,7 @@ public class GoogleResultsPage extends PageClass{
 	@Override
 	public void init() {
 		File file = new File("src/test/resources/google.properties");
-		googleLocator = CustomPageFactory.initElements(this.browser, GoogleLocator.class, file);
+		googleLocator = CustomPageFactory.initElements(this.browser, SimpleGoogleLocator.class, file);
 	}
 	
 	public void clickOnResult(){

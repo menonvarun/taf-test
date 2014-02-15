@@ -4,20 +4,20 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-import com.test.automation.framework.pagemodel.pages.GoogleHomePage;
-import com.test.automation.framework.pagemodel.pages.GoogleResultsPage;
+import com.test.automation.framework.pagemodel.simplepage.SimpleGoogleHomePage;
+import com.test.automation.framework.pagemodel.simplepage.SimpleGoogleResultsPage;
 
 public class GoogleTest extends TestClass{
 
 	@Test
 	public void googleTest(){
-		GoogleHomePage homePage = to(GoogleHomePage.class);
+		SimpleGoogleHomePage homePage = to(SimpleGoogleHomePage.class);
 		
 		homePage.searchForString("Testing");
 		
-		util.waitForPage(browser, GoogleResultsPage.class);		
+		util.waitForPage(browser, SimpleGoogleResultsPage.class);		
 		
-		GoogleResultsPage resultsPage = at(GoogleResultsPage.class);
+		SimpleGoogleResultsPage resultsPage = at(SimpleGoogleResultsPage.class);
 		
 		resultsPage.clickOnResult();
 		
