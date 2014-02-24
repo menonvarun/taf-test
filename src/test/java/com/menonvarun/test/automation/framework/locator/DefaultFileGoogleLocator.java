@@ -1,12 +1,13 @@
-package com.menonvarun.test.automation.framework.util.locator;
+package com.menonvarun.test.automation.framework.locator;
 
+import java.io.File;
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-public class ExternalFileGoogleLocator {
+public class DefaultFileGoogleLocator {
 	
 	@FindBy(how=How.CSS,using="search_box")
 	public WebElement searchField;
@@ -20,4 +21,8 @@ public class ExternalFileGoogleLocator {
 	@FindBy(how = How.CSS,using="search_result_text")
 	public WebElement searchResultText;
 
+	public File getLocatorFile(){
+		File file = new File("src/test/resources/google.properties");
+		return file;
+	}
 }

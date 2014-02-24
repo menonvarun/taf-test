@@ -1,4 +1,4 @@
-package com.menonvarun.test.automation.framework.util.locator;
+package com.menonvarun.test.automation.framework.locator;
 
 
 import java.io.File;
