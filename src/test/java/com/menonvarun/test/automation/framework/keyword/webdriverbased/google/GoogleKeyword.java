@@ -6,7 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import com.menonvarun.test.automation.framework.keywordmodel.keywords.KeywordBase;
 import com.menonvarun.test.automation.framework.locator.CustomPageFactory;
 
@@ -34,7 +33,7 @@ public class GoogleKeyword extends KeywordBase{
 	 */
 	public void searchForString(String searchString){
 		googleLocator.searchField.sendKeys(searchString);
-        googleLocator.submitButton.click();
+		googleLocator.submitButton.click();
     }
 	
 	/**
@@ -49,7 +48,10 @@ public class GoogleKeyword extends KeywordBase{
 	 * @param index
 	 */
 	public void clickOnResult(int index){
-        googleLocator.searchResult.get(index).click();
+
+	googleLocator.searchResult2.parent().parent().parent().nextAll().lasteElement().child().child().child().click();
+
+        
     }
 	
 	/**
@@ -78,6 +80,6 @@ public class GoogleKeyword extends KeywordBase{
 	 */
 	public void waitForTitle(String title){
 		WebDriverWait wait = new WebDriverWait(this.driver, 60);
-		wait.until(ExpectedConditions.titleContains("Software testing"));
+		wait.until(ExpectedConditions.titleContains("Testing Experience – Home"));
 	}
 }
