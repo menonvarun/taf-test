@@ -35,8 +35,9 @@ public class GoogleHomeLocatorPage extends PageClass{
 	
 	@Override
 	public File getLocatorFile(){
-		File file = new File("src/test/resources/google.properties");
-		return file;
+		/*File file = new File("src/test/resources/google.properties");
+		return file;*/
+		return evaluateLocatorFile("/google.properties");
 	}
 	
 	public void searchForString(String searchString){
