@@ -10,6 +10,28 @@
 	<!-- <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> 
 	</properties> -->
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<id>menonvarun</id>
+			<name>Varun Menon</name>
+			<email>mr.varun.menon@gmail.com</email>
+		</developer>
+	</developers>
+
+	
+	<scm>
+		<connection>scm:git:https://github.com/menonvarun/taf-test.git</connection>
+		<developerConnection>scm:git:git@github.com:menonvarun/taf-test.git</developerConnection>
+		<url>https://github.com/menonvarun/taf-test</url>    	
+  	</scm>
 
 	<dependencies>
 		<dependency>
