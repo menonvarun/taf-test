@@ -27,7 +27,7 @@ public class PageDriverTest extends TestClass{
 
 			homePage.searchForString("Testing");
 
-			util.waitForPage(browser, GoogleResultsLocatorPage.class);
+			waitForPage(browser, GoogleResultsLocatorPage.class);
 
 			GoogleResultsLocatorPage resultsPage = at(GoogleResultsLocatorPage.class);
 

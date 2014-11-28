@@ -32,7 +32,7 @@ public class PageGoogleTest extends TestClass{
 		
 		homePage.searchForString("Testing");
 		
-		util.waitForElementPresent(driver, homePage.googleLocator.searchResult);
+		waitForElementPresent(driver, homePage.googleLocator.searchResult);
 		
 		GoogleResultsPage resultsPage = new GoogleResultsPage(driver);
 		

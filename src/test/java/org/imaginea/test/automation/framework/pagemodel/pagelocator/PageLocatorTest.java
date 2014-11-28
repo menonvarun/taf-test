@@ -16,7 +16,7 @@ public class PageLocatorTest extends TestClass{
 		
 		homePage.searchForString("Testing");
 		
-		util.waitForPage(browser, GoogleResultsLocatorPage.class);		
+		waitForPage(browser, GoogleResultsLocatorPage.class);
 		
 		GoogleResultsLocatorPage resultsPage = at(GoogleResultsLocatorPage.class);
 		
@@ -35,7 +35,7 @@ public class PageLocatorTest extends TestClass{
 		
 		homePage.searchForString("Testing");
 		
-		util.waitForElementPresent(browser.getDriver(), homePage.searchResult);
+		waitForElementPresent(browser.getDriver(), homePage.searchResult);
 		
 		homePage.searchResult.get(0).click();
 		
@@ -49,7 +49,7 @@ public class PageLocatorTest extends TestClass{
 		
 		homePage.searchForString("Testing");
 		
-		util.waitForElementPresent(browser.getDriver(), homePage.searchResult);
+		waitForElementPresent(browser.getDriver(), homePage.searchResult);
 		
 		homePage.searchResult.get(0).click();
 		

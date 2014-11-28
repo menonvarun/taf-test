@@ -17,7 +17,7 @@ public class SimplePageGoogleTest extends TestClass{
 		
 		homePage.searchForString("Testing");
 		
-		util.waitForPage(browser, SimpleGoogleResultsPage.class);		
+		waitForPage(browser, SimpleGoogleResultsPage.class);
 		
 		SimpleGoogleResultsPage resultsPage = at(SimpleGoogleResultsPage.class);
 		

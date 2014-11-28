@@ -20,7 +20,7 @@ public class GoogleSearchDataTest extends TestClass{
 		
 		homePage.searchForString(data.searchtext);
 		
-		util.waitForPage(browser, SimpleGoogleResultsPage.class);		
+		waitForPage(browser, SimpleGoogleResultsPage.class);
 		
 		SimpleGoogleResultsPage resultsPage = at(SimpleGoogleResultsPage.class);
 		
