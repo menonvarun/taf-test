@@ -3,6 +3,7 @@ package org.imaginea.test.automation.framework.pagemodel.pagelocator;
 import java.io.File;
 import java.util.List;
 
+import org.imaginea.test.automation.framework.dom.filter.Filter;
 import org.imaginea.test.automation.framework.pagemodel.PageClass;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -38,6 +39,7 @@ public class GoogleHomeLocatorPage extends PageClass{
 		/*File file = new File("src/test/resources/google.properties");
 		return file;*/
 		return evaluateLocatorFile("/google.properties");
+
 	}
 	
 	public void searchForString(String searchString){

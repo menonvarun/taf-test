@@ -4,7 +4,7 @@
 
 	<groupId>org.imaginea</groupId>
 	<artifactId>taf-test</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.3</version>
 	<name>TestAutomationFramework Tests</name>
 	<!-- <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> 
@@ -36,12 +36,12 @@
   	
 	<distributionManagement>
 		<snapshotRepository>
-			<id>ossrh</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+			<id>localmvn</id>
+			<url>file:///H:/opt/github/mvn-repo/snapshots</url>
 		</snapshotRepository>
 		<repository>
-			<id>ossrh</id>
-			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+			<id>localmvn</id>
+			<url>file:///H:/opt/github/mvn-repo/releases</url>
 		</repository>
 	</distributionManagement>
 
@@ -95,7 +95,7 @@
 		<dependency>
 		    <groupId>org.imaginea</groupId>
 			<artifactId>testautomationframework</artifactId>
-			<version>0.0.2-SNAPSHOT</version>
+			<version>0.0.3.5-SNAPSHOT</version>
 		</dependency>
 		
 	</dependencies>
